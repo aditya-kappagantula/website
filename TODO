@@ -1,8 +1,10 @@
 ☐ Website
   ☐ Navigation Menu
   ☐ Footer Menu
+  ☐ Comments
   ☐ Pagination In Blog HomePage
-  ☐ CSS using ThemeUI
+  ✔ CSS using ThemeUI @done(23-01-13 15:11)
+  ✔ Router @done(23-01-13 11:27)
   ✔ Math Equations Support @done(23-01-13 11:13)
   ✔ Mardown Pages @done(23-01-13 11:13)
   ✔ Common Layout @done(23-01-13 11:13)

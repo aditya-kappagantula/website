@@ -72,5 +72,11 @@ module.exports = {
         component: require.resolve(`./src/components/Layout/index.jsx`),
       },
     },
+    {
+      resolve: `gatsby-plugin-theme-ui`,
+      options: {
+        preset: "@theme-ui/preset-funk",
+      },
+    },
   ]
 };
