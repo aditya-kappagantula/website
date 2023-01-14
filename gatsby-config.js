@@ -5,7 +5,31 @@ module.exports = {
   siteMetadata: {
     title: `website`,
     siteUrl: `https://www.yourdomain.tld`,
-    description: `This is a personal website.`
+    description: `This is a personal website.`,
+    menuLinks: [
+      {
+        name: `Page 1`,
+        link: `/page-1`,
+      },
+      {
+        name: `Page 2`,
+        link: `/page-2`,
+        subMenu: [
+          {
+            name: `Sub 1`,
+            link: `/sub-1`,
+          },
+          {
+            name: `Sub 2`,
+            link: `/sub-2`,
+          },
+        ],
+      },
+      {
+        name: `Page 3`,
+        link: `/page-3`,
+      },
+    ],
   },
   plugins: [
     "gatsby-plugin-styled-components", 
