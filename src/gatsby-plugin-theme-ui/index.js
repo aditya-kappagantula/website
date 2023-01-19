@@ -1,15 +1,13 @@
-export default {
-  colors: {
-    text: "#333",
-    background: "#fff",
-    primary: "#639",
-    secondary: "#ff6347",
-  },
+const theme = {
+  breakpoints: ['40em', '52em', '64em'],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
-    body: "system-ui, sans-serif",
-    heading: "system-ui, sans-serif",
-    monospace: "Menlo, monospace",
+    body:
+      'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    heading: 'inherit',
+    monospace: 'Menlo, monospace',
   },
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -19,26 +17,75 @@ export default {
     body: 1.5,
     heading: 1.125,
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-  // base theme values...
-  styles: {
-    // the keys used here reference elements in MDX
-    h1: {
-      // the style object for each element
-      // can reference other values in the theme
-      fontFamily: "heading",
-      fontWeight: "heading",
-      lineHeight: "heading",
-      marginTop: 0,
-      marginBottom: 3,
+  colors: {
+    text: '#000',
+    background: '#fff',
+    primary: '#07c',
+    secondary: '#30c',
+    muted: '#f6f6f6',
+  },
+  text: {
+    heading: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
     },
-    a: {
-      color: "primary",
-      ":hover, :focus": {
-        color: "secondary",
+  },
+  styles: {
+    root: {
+      fontFamily: 'body',
+      lineHeight: 'body',
+      fontWeight: 'body',
+    },
+    h1: {
+      variant: 'text.heading',
+      fontSize: 5,
+    },
+    h2: {
+      variant: 'text.heading',
+      fontSize: 4,
+    },
+    h3: {
+      variant: 'text.heading',
+      fontSize: 3,
+    },
+    h4: {
+      variant: 'text.heading',
+      fontSize: 2,
+    },
+    h5: {
+      variant: 'text.heading',
+      fontSize: 1,
+    },
+    h6: {
+      variant: 'text.heading',
+      fontSize: 0,
+    },
+    pre: {
+      fontFamily: 'monospace',
+      overflowX: 'auto',
+      code: {
+        color: 'inherit',
       },
     },
-    // more styles can be added as needed
+    code: {
+      fontFamily: 'monospace',
+      fontSize: 'inherit',
+    },
+    table: {
+      width: '100%',
+      borderCollapse: 'separate',
+      borderSpacing: 0,
+    },
+    th: {
+      textAlign: 'left',
+      borderBottomStyle: 'solid',
+    },
+    td: {
+      textAlign: 'left',
+      borderBottomStyle: 'solid',
+    },
   },
-}
+};
+
+export default theme

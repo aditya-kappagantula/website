@@ -1,9 +1,12 @@
 ☐ Website
-  ☐ Navigation Menu
+  ✔ Navigation Menu @done(23-01-13 16:19)
+  ☐ Offline Support
   ☐ Footer Menu
+  ☐ Tags
   ☐ Comments
   ☐ Pagination In Blog HomePage
-  ✔ CSS using ThemeUI @done(23-01-13 15:11)
+  ☐ Responsive Website
+  ✔ CSS using ThemeUI @done(23-01-17 11:58)
   ✔ Router @done(23-01-13 11:27)
   ✔ Math Equations Support @done(23-01-13 11:13)
   ✔ Mardown Pages @done(23-01-13 11:13)

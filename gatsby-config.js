@@ -8,26 +8,26 @@ module.exports = {
     description: `This is a personal website.`,
     menuLinks: [
       {
-        name: `Page 1`,
-        link: `/page-1`,
+        name: `Home`,
+        link: `/home`,
       },
+      // {
+      //   name: `Contact`,
+      //   link: `/page-2`,
+      //   subMenu: [
+      //     {
+      //       name: `Sub 1`,
+      //       link: `/sub-1`,
+      //     },
+      //     {
+      //       name: `Sub 2`,
+      //       link: `/sub-2`,
+      //     },
+      //   ],
+      // },
       {
-        name: `Page 2`,
-        link: `/page-2`,
-        subMenu: [
-          {
-            name: `Sub 1`,
-            link: `/sub-1`,
-          },
-          {
-            name: `Sub 2`,
-            link: `/sub-2`,
-          },
-        ],
-      },
-      {
-        name: `Page 3`,
-        link: `/page-3`,
+        name: `What's Here!`,
+        link: `/whats-here`,
       },
     ],
   },
@@ -39,9 +39,27 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        "icon": "src/images/icon.png"
+        name: `The Cool Application`,
+        short_name: `Cool App`,
+        description: `The application does cool things and makes your life better.`,
+        lang: `en`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#fff`,
+        cache_busting_mode: 'none',
+        theme_color_in_head: false, 
       },
     }, 
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/src/images/icon.png']
+        }
+      }
+    },
     "gatsby-plugin-mdx", 
     "gatsby-plugin-sharp", 
     "gatsby-transformer-sharp", 
