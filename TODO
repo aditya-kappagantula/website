@@ -1,11 +1,16 @@
 ☐ Website
   ✔ Navigation Menu @done(23-01-13 16:19)
-  ☐ Offline Support
+  ✔ Offline Support @done(23-01-19 10:11)
   ☐ Footer Menu
-  ☐ Tags
+  ✔ Tags @done(23-01-23 21:06)
+  ☐ CSS Improvements
+  ☐ Theme Improvements
+  ☐ List of Articles Component
+  ☐ Article Excerpt
   ☐ Comments
+  ☐ All Blog Posts
   ☐ Pagination In Blog HomePage
-  ☐ Responsive Website
+  ✔ Responsive Website @done(23-01-22 18:50)
   ✔ CSS using ThemeUI @done(23-01-17 11:58)
   ✔ Router @done(23-01-13 11:27)
   ✔ Math Equations Support @done(23-01-13 11:13)

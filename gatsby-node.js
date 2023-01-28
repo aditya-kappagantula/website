@@ -1,5 +1,23 @@
+const path = require("path")
+const _ = require("lodash")
+const tags = []
+
 exports.onCreatePage = ({ page, actions }) => {
-  const { createPage } = actions
+  const { createPage, deletePage } = actions
+  if (page?.context?.__params?.frontmatter__tags?.split('-').length > 1) {
+    deletePage(page)
+  }
+  console.log(page.context.__parsms)
+  if (page.path.match(/^\/tags/)) {
+    if (Array.isArray(page.context.frontmatter__tags)) {
+      page.context.frontmatter__tags.forEach(tag => {
+        if (!tags[tag]) {
+          tags.push(tag)
+          createPage({ ...page, context: {tag}, path: `/tags/${tag}/` })
+        }
+      })
+    }
+  }
 
   if (page.path.match(/special-page/)) {
     page.context.layout = "special"

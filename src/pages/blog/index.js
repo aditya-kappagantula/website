@@ -1,18 +1,35 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import PostLink from "../../components/PostLink"
+import { graphql } from 'gatsby' 
 
-const BlogHomePage = ({ data }) => {
-  console.log(data)
-  return <div>Hello!</div>
+const BlogHomePage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
+  const Posts = edges
+    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+
+  return <div>{Posts}</div>
 }
 
-export const query = graphql`
-  query BlogHomePageQuery {
-    site {
-      siteMetadata {
-        description
+export default BlogHomePage
+
+// excerpt(pruneLength: 250)
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC }}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            slug
+            title
+          }
+        }
       }
     }
-  }`
-
-export default BlogHomePage
+  }
+`

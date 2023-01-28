@@ -32,9 +32,6 @@ module.exports = {
     ],
   },
   plugins: [
-    "gatsby-plugin-styled-components", 
-    "gatsby-plugin-google-gtag", 
-    "gatsby-plugin-image", 
     "gatsby-plugin-sitemap", 
     {
       resolve: 'gatsby-plugin-manifest',
@@ -60,6 +57,9 @@ module.exports = {
         }
       }
     },
+    "gatsby-plugin-styled-components", 
+    "gatsby-plugin-google-gtag", 
+    "gatsby-plugin-image", 
     "gatsby-plugin-mdx", 
     "gatsby-plugin-sharp", 
     "gatsby-transformer-sharp", 
@@ -118,6 +118,9 @@ module.exports = {
       resolve: `gatsby-plugin-theme-ui`,
       options: {
         preset: "@theme-ui/preset-funk",
+        useBorderBox: true,
+        useLocalStorage: true,
+        useRootStyles: true,
       },
     },
   ]
