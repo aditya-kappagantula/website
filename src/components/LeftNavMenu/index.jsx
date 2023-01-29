@@ -1,44 +1,25 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { useSiteMetadata } from '../../hooks/useSiteMetadata'
-import { Flex } from 'theme-ui'
+import { Flex, Link } from 'theme-ui'
+import getIcon from '../../utils/tagIcons'
 
 function LeftNavMenu() {
   const { menuLinks } = useSiteMetadata()
   return (
     <Flex>
-      <ul
-        sx={{
-          listStyle: "none",
-          background: "darkorange",
-          margin: 0,
-          padding: 0,
-        }}
-      >
+      <ul sx={{ listStyle: "none", flex: 1 }}>
         {menuLinks.map((link) => (
-          <li key={link.name}>
-            <a
-              sx={{
-                color: "white",
-                textDecoration: "none",
-              }}
-              href={link.link}
-            >
-              {link.name}
-            </a>
+          <li key={link.name} sx={{ m: 's' }}>
+            <Flex sx={{ alignItems: 'center' }}>
+              {getIcon(link.icon)}
+            <Link href={link.link}>{link.name}</Link>
+            </Flex>
             {link.subMenu && link.subMenu.length > 0 ? (
               <ul>
                 {link.subMenu.map((subLink) => (
                   <li key={subLink.name}>
-                    <a
-                      sx={{
-                        color: "white",
-                        textDecoration: "none",
-                      }}
-                      href={subLink.link}
-                    >
-                      {subLink.name}
-                    </a>
+                    <Link href={subLink.link}>{subLink.name}</Link>  
                   </li>
                 ))}
               </ul>

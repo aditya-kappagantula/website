@@ -9,7 +9,33 @@ module.exports = {
     menuLinks: [
       {
         name: `Home`,
-        link: `/home`,
+        link: `/`,
+        icon: `home`,
+      },
+      {
+        name: `About`,
+        link: `/about`,
+        icon: `about`,
+      },
+      {
+        name: `Finance`,
+        link: `/tags/finance`,
+        icon: `money`,
+      },
+      {
+        name: `Life`,
+        link: `/tags/life`,
+        icon: `life`,
+      },
+      {
+        name: `Programming`,
+        link: `/tags/programming`,
+        icon: `programming`,
+      },
+      {
+        name: `Misc`,
+        link: `/tags/misc`,
+        icon: `misc`,
       },
       // {
       //   name: `Contact`,
@@ -25,10 +51,6 @@ module.exports = {
       //     },
       //   ],
       // },
-      {
-        name: `What's Here!`,
-        link: `/whats-here`,
-      },
     ],
   },
   plugins: [

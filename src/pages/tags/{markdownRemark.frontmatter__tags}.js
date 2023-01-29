@@ -1,14 +1,12 @@
-import React from "react"
-import { Router } from "@reach/router"
-import Header from '../../components/Header'
-// Components
-import { Link, graphql } from "gatsby"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+import { graphql } from "gatsby"
 
 const Tags = ({data}) => {  
-  console.log('--->', data)
+  console.log(data)
   return (
     <div>
-      hi there!
+      Tags Page
     </div>
   )
 } 

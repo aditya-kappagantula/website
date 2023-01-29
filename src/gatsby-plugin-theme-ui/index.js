@@ -1,9 +1,21 @@
 const theme = {
+  "initialColorModeName": "light",
   "breakpoints": [
     "@media only screen and (min-width : 845px)",
     "@media only screen and (min-width : 992px)"
   ],
   "space": {
+    none: '0rem',
+    xxs: '0.25rem',
+    xs: '.5rem',
+    s: '0.75rem',
+    m: '1rem',
+    l: '2rem',
+    xl: '4rem',
+    xxl: '8rem',
+    xxxl: '16rem'
+  },
+  "size": {
     none: '0rem',
     xxs: '0.25rem',
     xs: '.5rem',
@@ -36,25 +48,29 @@ const theme = {
     "heading": 1.25
   },
   "colors": {
-    "text": "#000",
-    "background": "#fff",
-    "primary": "#11e",
-    "secondary": "#c0c",
-    "highlight": "#e0e",
+    "text": "#000000",
+    "background": "#FEFEFE",
+    "primary": "#000",
+    "secondary": "#000",
+    "highlight": "#DDD",
     "muted": "#f6f6ff",
     "modes": {
       "dark": {
-        "text": "#fff",
-        "background": "#000",
-        "primary": "#0fc",
-        "secondary": "#0cf",
-        "highlight": "#f0c",
+        "text": "#149414",
+        "background": "#333",
+        "primary": "#FFF",
+        "secondary": "#FFF",
+        "highlight": "#333",
         "muted": "#011"
       }
     }
   },
   "styles": {
     "root": {
+      "::selection": {
+        "color": "#149414",
+        "background": "#FEFEFE",
+      },
       "height": "100%",
       "fontFamily": "body",
       "lineHeight": "body",
@@ -109,7 +125,8 @@ const theme = {
       "lineHeight": "body"
     },
     "a": {
-      "color": "primary"
+      "color": "text",
+      "textDecoration": "none"
     },
     "pre": {
       "fontFamily": "monospace",

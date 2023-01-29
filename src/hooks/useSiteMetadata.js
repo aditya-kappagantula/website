@@ -13,9 +13,11 @@ export const useSiteMetadata = () => {
             menuLinks {
               name
               link
+              icon
               subMenu {
                 name
                 link
+                icon
               }
             }
           }

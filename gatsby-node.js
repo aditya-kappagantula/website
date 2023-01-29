@@ -7,7 +7,6 @@ exports.onCreatePage = ({ page, actions }) => {
   if (page?.context?.__params?.frontmatter__tags?.split('-').length > 1) {
     deletePage(page)
   }
-  console.log(page.context.__parsms)
   if (page.path.match(/^\/tags/)) {
     if (Array.isArray(page.context.frontmatter__tags)) {
       page.context.frontmatter__tags.forEach(tag => {
@@ -53,11 +52,13 @@ exports.createSchemaCustomization = ({ actions }) => {
     type MenuLinks {
       name: String!
       link: String!
+      icon: String!
       subMenu: [SubMenu] @defaultArray
     }
     type SubMenu {
       name: String
       link: String
+      icon: String
     }
   `;
   createTypes(typeDefs);

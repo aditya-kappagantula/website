@@ -1,16 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
-import icons from "../../utils/tagIcons"
+import getIcon from "../../utils/tagIcons"
 import { Flex } from "theme-ui"
 import PillButton from '../../components/PillButton'
 
 const TagsListPage = ({ data }) => {
-  console.log('rendering tags list page')
   return (
     <Flex>
       {  
         data.allMarkdownRemark.group.map(({ fieldValue }) => {
-          const { component } = icons.find(icon => icon.tag === fieldValue) || icons.find(icon => icon.tag === 'misc')
+          const { component } = getIcon(fieldValue)
           return (
             <PillButton label={fieldValue}>
               {component}
