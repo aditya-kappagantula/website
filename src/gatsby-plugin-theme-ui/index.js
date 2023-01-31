@@ -14,7 +14,7 @@ const theme = {
     l: "2rem",
     xl: "4rem",
     xxl: "8rem",
-    xxxl: "16rem"
+    xxxl: "16rem",
   },
   "size": {
     none: "0rem",
@@ -55,10 +55,11 @@ const theme = {
   },
   "borders": {
     light: "1px solid rgb(0,0,0,0.2)",
-    dark: "1px solid rgb(20, 148, 20, 1)",
+    dark: "1px solid #149414",
   },
   "colors": {
     "text": "#000000",
+    "icon": "#149414",
     "background": "#FEFEFE",
     "primary": "#000",
     "secondary": "#000",
@@ -70,7 +71,8 @@ const theme = {
     "gray": "#666",
     "modes": {
       "dark": {
-        "text": "#149414",
+        "icon": "#FFFFFF",
+        "text": "#149414", 
         "background": "#333",
         "primary": "#FFF",
         "secondary": "#FFF",

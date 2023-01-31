@@ -1,35 +1,37 @@
 import React from "react"
-import PostLink from "../../components/PostLink"
-import { graphql } from 'gatsby' 
+import { graphql } from "gatsby"
+import { Flex } from "theme-ui"
+import PostTile from '../../components/PostTile'
 
-const BlogHomePage = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) => {
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
-
-  return <div>{Posts}</div>
+const BlogHomePage = ({ data: { allMarkdownRemark: { edges } } }) => {
+  return (
+    <Flex sx={{ flexDirection: 'column', flex: 1 }}>
+      Blog Home Page:
+      <Flex sx={{ flexDirection: 'column', flex: 1 }}>
+        { edges.map(edge => <PostTile data={edge} />) }
+      </Flex>
+    </Flex>
+  )
 }
 
-export default BlogHomePage
-
-// excerpt(pruneLength: 250)
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(sort: { frontmatter: { date: DESC }}) {
       edges {
         node {
           id
+          excerpt(pruneLength: 250)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             slug
             title
+            tags
           }
         }
       }
     }
   }
 `
+export default BlogHomePage
+
+export const Head = () => <title>Blog Home Page</title>

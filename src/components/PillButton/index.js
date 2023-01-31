@@ -5,7 +5,8 @@ import { navigate } from "gatsby"
 
 function PillButton ({label, url, children}) {
   const [colorMode] = useColorMode()
-  function navigateToRoute() {
+  function navigateToRoute(e) {
+    e.stopPropagation()
     navigate(url)
   }
   return (

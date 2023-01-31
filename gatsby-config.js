@@ -1,6 +1,3 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
 module.exports = {
   siteMetadata: {
     title: `website`,
@@ -10,12 +7,17 @@ module.exports = {
       {
         name: `Home`,
         link: `/`,
-        icon: `home`,
+        icon: `home`
       },
       {
         name: `About`,
         link: `/about`,
         icon: `about`,
+      },
+      {
+        name: `Blog`,
+        link: `/blog`,
+        icon: `blog`,
       },
       {
         name: `Tags`,
@@ -102,7 +104,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-shard`,
+      resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
           formats: [`auto`, `webp`],
@@ -182,7 +184,7 @@ module.exports = {
             options: {
               classPrefix: "language-",
               aliases: {},
-              showLineNumbers: true,
+              showLineNumbers: false,
               prompt: {
                 user: "root",
                 host: "localhost",

@@ -6,17 +6,12 @@ import { BsBrightnessHighFill } from "@react-icons/all-files/bs/BsBrightnessHigh
 
 function Header() {
   const [colorMode, setColorMode] = useColorMode()
-  const colorModeIcon = colorMode === 'light' ? '#149414'  : '#FFF'
   return (
     <Flex sx={{
       alignItems: 'center',
       justifyContent: 'space-between',  
-      position: 'sticky',
       flex: 1,
-      top: 0,
       px: [null, 'xl'],
-      background: 'background',
-      zIndex: 999,
     }}>
       <StaticImage src="../../images/logo.png"  
         sx={{ m: 'xs' }}
@@ -30,7 +25,7 @@ function Header() {
         <IconButton sx={{ m: 'xs' }} onClick={(e) => {
             setColorMode(colorMode === 'light' ? 'dark' : 'light')
         }}>
-          <BsBrightnessHighFill sx={{width: '24px', height: '24px', color: colorModeIcon}} />
+          <BsBrightnessHighFill sx={{width: '24px', height: '24px', color: 'icon'}} />
         </IconButton>
         <MenuButton aria-label="Toggle Menu" sx={{ display: ['block', 'none'], m: 'xs' }} />
       </Flex>

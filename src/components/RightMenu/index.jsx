@@ -4,17 +4,18 @@ import { useSiteMetadata } from '../../hooks/useSiteMetadata'
 import { Flex, Link, useColorMode } from 'theme-ui'
 import getIcon from '../../utils/tagIcons'
 
-function LeftNavMenu() {
+function RightMenu() {
   const [colorMode] = useColorMode()
   const { menuLinks } = useSiteMetadata()
   return (
     <Flex sx={{
       display: ['none', 'flex'], 
-      borderRight: colorMode, 
+      borderLeft: colorMode, 
       px: 'l',
       position: 'fixed',
       pt: 'xl',
       top: 0,
+      right: 'xl',
       bottom: 0
     }}>
       <nav>
@@ -42,4 +43,4 @@ function LeftNavMenu() {
   )
 }
 
-export default LeftNavMenu
+export default RightMenu

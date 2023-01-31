@@ -9,6 +9,8 @@ import { MdAttachMoney } from "@react-icons/all-files/md/MdAttachMoney"
 import { VscCode } from "@react-icons/all-files/vsc/VscCode"
 import { VscAccount } from "@react-icons/all-files/vsc/VscAccount"
 import { VscTag } from "@react-icons/all-files/vsc/VscTag"
+import { ImBlog } from "@react-icons/all-files/im/ImBlog";
+
 
 const tagIcons = [
   {
@@ -46,6 +48,10 @@ const tagIcons = [
   {
     tag: 'tag',
     component: <VscTag sx={{m: 'xs', minWidth: '12px', minHeight: '12px'}} />
+  },
+  {
+    tag: 'blog',
+    component: <ImBlog sx={{m: 'xs', minWidth: '12px', minHeight: '12px'}} />
   }
 ]
 

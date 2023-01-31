@@ -9,7 +9,7 @@ Hola!
 This is a part of the excerpt
 $a^2 + b^2 = c^2$
 
-```js{1,4-10}
+```js{numberLines:true}{1,4-10}
 import "./src/utils/global.css"
 import "katex/dist/katex.min.css"
 import "prismjs/themes/prism-solarizedlight.css"
