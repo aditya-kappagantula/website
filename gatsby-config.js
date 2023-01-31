@@ -18,6 +18,11 @@ module.exports = {
         icon: `about`,
       },
       {
+        name: `Tags`,
+        link: `/tags`,
+        icon: `tag`,
+      },
+      {
         name: `Finance`,
         link: `/tags/finance`,
         icon: `money`,
@@ -82,10 +87,54 @@ module.exports = {
     "gatsby-plugin-styled-components", 
     "gatsby-plugin-google-gtag", 
     "gatsby-plugin-image", 
-    "gatsby-plugin-mdx", 
-    "gatsby-plugin-sharp", 
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-shard`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+      },
+    },
     "gatsby-transformer-sharp", 
-    "gatsby-transformer-remark",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -120,13 +169,28 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          'gatsby-remark-prismjs-copy-button',
           {
             resolve: `gatsby-remark-katex`,
             options: {
               // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
               strict: `ignore`
             }
-          }
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              aliases: {},
+              showLineNumbers: true,
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: false,
+              },
+              escapeEntities: {},
+            }
+          },
         ],
       },
     },

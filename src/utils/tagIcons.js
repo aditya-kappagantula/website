@@ -8,43 +8,51 @@ import { VscHome } from "@react-icons/all-files/vsc/VscHome"
 import { MdAttachMoney } from "@react-icons/all-files/md/MdAttachMoney"
 import { VscCode } from "@react-icons/all-files/vsc/VscCode"
 import { VscAccount } from "@react-icons/all-files/vsc/VscAccount"
+import { VscTag } from "@react-icons/all-files/vsc/VscTag"
 
 const tagIcons = [
   {
     tag: 'life',
-    component: <FaLifeRing sx={{m: 'xs'}}/>
+    component: <FaLifeRing sx={{m: 'xs', minWidth: '12px', minHeight: '12px'}}/>
   },
   {
     tag: 'math',
-    component: <AiFillCalculator sx={{m: 'xs'}} />
+    component: <AiFillCalculator sx={{m: 'xs', minWidth: '12px', minHeight: '12px'}} />
   },
   {
     tag: 'finance',
-    component: <AiFillDollarCircle sx={{m: 'xs'}} />
+    component: <AiFillDollarCircle sx={{m: 'xs', minWidth: '12px', minHeight: '12px'}} />
   },
   {
     tag: 'misc',
-    component: <VscSymbolMisc sx={{m: 'xs'}} />
+    component: <VscSymbolMisc sx={{m: 'xs', minWidth: '12px', minHeight: '12px'}} />
   },
   {
     tag: 'home',
-    component: <VscHome sx={{m: 'xs'}} />
+    component: <VscHome sx={{m: 'xs', minWidth: '12px', minHeight: '12px'}} />
   },
   {
     tag: 'money',
-    component: <MdAttachMoney sx={{m: 'xs'}} />
+    component: <MdAttachMoney sx={{m: 'xs', minWidth: '12px', minHeight: '12px'}} />
   },
   {
     tag: 'programming',
-    component: <VscCode sx={{m: 'xs'}} />
+    component: <VscCode sx={{m: 'xs', minWidth: '12px', minHeight: '12px'}} />
   },
   {
     tag: 'about',
-    component: <VscAccount sx={{m: 'xs'}} />
+    component: <VscAccount sx={{m: 'xs', minWidth: '12px', minHeight: '12px'}} />
+  },
+  {
+    tag: 'tag',
+    component: <VscTag sx={{m: 'xs', minWidth: '12px', minHeight: '12px'}} />
   }
 ]
 
 export default function getIcon(name) {
-  console.log(name)
-  return tagIcons.find(x => x.tag === name).component || tagIcons.find(x => x.tag === 'misc').component
+  const tagIcon = tagIcons.find(x => x.tag === name)
+  if (tagIcon) {
+    return tagIcon.component
+  }
+  return tagIcons.find(x => x.tag === 'misc').component
 }

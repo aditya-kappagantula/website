@@ -14,3 +14,43 @@ ul {
   margin-block-start: unset;
   margin-block-end: unset;
 }
+
+.gatsby-highlight-code-line {
+  background-color: #555;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
+}
+
+pre[class*="language-"] {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.line-numbers-rows > span:last-child {
+  display: none;
+}
+
+.gatsby-remark-prismjs-copy-button-container {
+  touch-action: none;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 35px !important;
+  left: -10px !important;
+  margin-top: -28px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gatsby-remark-prismjs-copy-button {
+  cursor: pointer;
+  pointer-events: initial;
+  font-size: 13px;
+  padding: 3px 5px 2px;
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.88);
+}

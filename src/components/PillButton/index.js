@@ -1,14 +1,29 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import { Flex } from "theme-ui"
-function PillButton ({label, children}) {
+import { Box, jsx } from "theme-ui"
+import { Flex, useColorMode } from "theme-ui"
+import { navigate } from "gatsby"
+
+function PillButton ({label, url, children}) {
+  const [colorMode] = useColorMode()
+  function navigateToRoute() {
+    navigate(url)
+  }
   return (
-    <Flex sx={{ 
-      alignItems: 'center', 
-      margin: 'xs'
-    }}>
-      {children} {label}
-    </Flex>
+    <Box>
+      <Flex onClick={navigateToRoute}
+      sx={{ 
+        cursor: 'pointer',
+        alignItems: 'center', 
+        pr: 'xs',
+        pl: 'xs',
+        m: 'xxs',
+        border: colorMode,
+        borderRadius: 'm'
+      }}>
+        {children} {label}
+      </Flex>
+    </Box>
+
   )
 }
 

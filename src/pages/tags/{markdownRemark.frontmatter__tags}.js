@@ -1,13 +1,16 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Flex } from "theme-ui"
 import { graphql } from "gatsby"
+import PostTile from '../../components/PostTile'
 
-const Tags = ({data}) => {  
-  console.log(data)
+const Tags = ({ data: { allMarkdownRemark: { edges } } }) => {
   return (
-    <div>
-      Tags Page
-    </div>
+    <Flex sx={{ flexDirection: 'column', flex: 1 }}>
+      Tags Page:
+      <Flex sx={{ flexDirection: 'column', flex: 1 }}>
+        { edges.map(edge => <PostTile data={edge} />) }
+      </Flex>
+    </Flex>
   )
 } 
 
@@ -28,6 +31,11 @@ export const pageQuery = graphql`
             title
             slug
             tags
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(width: 800, height: 400)
+              }
+            }
           }
         }
       }

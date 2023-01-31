@@ -3,7 +3,7 @@ import { jsx } from "theme-ui"
 import { ContextProviderComponent } from "../Context"
 import Header from '../Header'
 import LeftNavMenu from '../LeftNavMenu'
-import { Box, Flex } from "theme-ui"
+import { Flex } from "theme-ui"
 
 function Layout({ children, pageContext }) {
 
@@ -17,14 +17,14 @@ function Layout({ children, pageContext }) {
   }
   return (
     <ContextProviderComponent>
-      <Header />
-      <Flex sx={{ flex: '1', color: 'text' }}>
-        <Box sx={{display: ['none', 'block'], flexGrow: [0, 1], borderRight: '1px solid rgba(0, 0, 0, .2);', flex: 1}}>
-          <LeftNavMenu />
-        </Box>
-        <Box sx={{ flex: '1 1 auto', flexGrow: [5] }}>
+      <Flex sx={{ flex: 1, px: [null, 'l'], borderBottom: '1px solid rgba(0, 0, 0, .2);', }}>
+        <Header />
+      </Flex>
+      <Flex sx={{ flex: 1, color: 'text', mx: [null, 'xl'] }}>
+        <LeftNavMenu />
+        <Flex sx={{ flex: 1 }}>
           {children}
-        </Box>
+        </Flex>
       </Flex>
     </ContextProviderComponent>
   )

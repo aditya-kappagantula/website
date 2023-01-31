@@ -6,13 +6,13 @@ import PillButton from '../../components/PillButton'
 
 const TagsListPage = ({ data }) => {
   return (
-    <Flex>
+    <Flex sx={{ flexWrap: 'wrap' }}>
       {  
         data.allMarkdownRemark.group.map(({ fieldValue }) => {
-          const { component } = getIcon(fieldValue)
+          const icon = getIcon(fieldValue)
           return (
-            <PillButton label={fieldValue}>
-              {component}
+            <PillButton label={fieldValue} url={`/tags/${fieldValue}`}>
+              {icon}
             </PillButton>
           )
         })

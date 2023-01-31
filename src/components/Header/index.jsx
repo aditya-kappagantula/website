@@ -12,8 +12,11 @@ function Header() {
       alignItems: 'center',
       justifyContent: 'space-between',  
       position: 'sticky',
+      flex: 1,
       top: 0,
-      borderBottom: '1px solid rgba(0, 0, 0, .2);'
+      px: [null, 'xl'],
+      background: 'background',
+      zIndex: 999,
     }}>
       <StaticImage src="../../images/logo.png"  
         sx={{ m: 'xs' }}

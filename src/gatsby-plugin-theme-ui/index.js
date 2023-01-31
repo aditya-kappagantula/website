@@ -5,26 +5,28 @@ const theme = {
     "@media only screen and (min-width : 992px)"
   ],
   "space": {
-    none: '0rem',
-    xxs: '0.25rem',
-    xs: '.5rem',
-    s: '0.75rem',
-    m: '1rem',
-    l: '2rem',
-    xl: '4rem',
-    xxl: '8rem',
-    xxxl: '16rem'
+    none: "0rem",
+    xxxs: "0.125rem",
+    xxs: "0.25rem",
+    xs: ".5rem",
+    s: "0.75rem",
+    m: "1rem",
+    l: "2rem",
+    xl: "4rem",
+    xxl: "8rem",
+    xxxl: "16rem"
   },
   "size": {
-    none: '0rem',
-    xxs: '0.25rem',
-    xs: '.5rem',
-    s: '0.75rem',
-    m: '1rem',
-    l: '2rem',
-    xl: '4rem',
-    xxl: '8rem',
-    xxxl: '16rem'
+    none: "0rem",
+    xxxs: "0.125rem",
+    xxs: "0.25rem",
+    xs: ".5rem",
+    s: "0.75rem",
+    m: "1rem",
+    l: "2rem",
+    xl: "4rem",
+    xxl: "8rem",
+    xxxl: "16rem"
   },
   "fonts": {
     "body": "\"Avenir Next\", system-ui, sans-serif",
@@ -47,6 +49,14 @@ const theme = {
     "body": 1.75,
     "heading": 1.25
   },
+  "radii": {
+    "s": "10px",
+    "m": "20px",
+  },
+  "borders": {
+    light: "1px solid rgb(0,0,0,0.2)",
+    dark: "1px solid rgb(20, 148, 20, 1)",
+  },
   "colors": {
     "text": "#000000",
     "background": "#FEFEFE",
@@ -54,6 +64,10 @@ const theme = {
     "secondary": "#000",
     "highlight": "#DDD",
     "muted": "#f6f6ff",
+    "red": "#ec3750",
+    "green": "#33d6a6",
+    "blue": "#338eda",
+    "gray": "#666",
     "modes": {
       "dark": {
         "text": "#149414",
@@ -61,7 +75,7 @@ const theme = {
         "primary": "#FFF",
         "secondary": "#FFF",
         "highlight": "#333",
-        "muted": "#011"
+        "muted": "#011",
       }
     }
   },
@@ -73,7 +87,6 @@ const theme = {
       },
       "height": "100%",
       "fontFamily": "body",
-      "lineHeight": "body",
       "fontWeight": "body"
     },
     "h1": {
@@ -129,15 +142,20 @@ const theme = {
       "textDecoration": "none"
     },
     "pre": {
-      "fontFamily": "monospace",
-      "overflowX": "auto",
-      "code": {
-        "color": "inherit"
+      '.comment, .prolog, .doctype, .cdata, .punctuation, .operator, .entity, .url': {
+
+        color: 'gray'
+      },
+      '.property, .tag, .boolean, .number, .constant, .symbol, .deleted, .function, .class-name, .regex, .important, .variable':
+        {
+          color: 'red'
+        },
+      '.atrule, .attr-value, .keyword': {
+        color: 'blue'
+      },
+      '.selector, .attr-name, .string, .char, .builtin, .inserted': {
+        color: 'green'
       }
-    },
-    "code": {
-      "fontFamily": "monospace",
-      "fontSize": "inherit"
     },
     "table": {
       "width": "100%",
