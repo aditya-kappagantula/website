@@ -1,12 +1,42 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { useSiteMetadata } from '../../hooks/useSiteMetadata'
-import { Flex, Link, useColorMode } from 'theme-ui'
-import getIcon from '../../utils/tagIcons'
+import { Flex, Box, useColorMode } from 'theme-ui'
 
-function RightMenu() {
+/**
+const TocItem = ({ toc }) => {
+  const subItem = (toc.items || []).map(item => (
+    <ul key={item.url}>
+      <TocItem toc={item} type="child" />
+    </ul>
+  ))
+
+  return (
+    <li key={toc.title}>
+      <a href={toc.url}>{toc.title}</a>
+      {subItem}
+    </li>
+  )
+}
+
+const TableOfContents = ({ toc }) => (
+  <ul>
+    {(toc.items || []).map((item, index) => (
+      <TocItem key={index} toc={item} />
+    ))}
+  </ul>
+)
+
+function walk(node, func, output) {
+  var children = node.childNodes;
+  for (var i = 0; i < children.length; i++)  // Children are siblings to each other
+      walk(children[i], func);
+  func(node);
+}
+
+*/
+
+function RightMenu({ toc }) {
   const [colorMode] = useColorMode()
-  const { menuLinks } = useSiteMetadata()
   return (
     <Flex sx={{
       display: ['none', 'flex'], 
@@ -16,29 +46,15 @@ function RightMenu() {
       pt: 'xl',
       top: 0,
       right: 'xl',
-      bottom: 0
+      bottom: 0,
+      maxWidth: [null, '16rem'],
+      flexDirection: 'column'
     }}>
-      <nav>
-        <ul sx={{ listStyle: "none", flex: 1 }}>
-          {menuLinks.map((link) => (
-            <li key={link.name} sx={{ m: 's', cursor: 'pointer' }}>
-              <Flex sx={{ alignItems: 'center' }}>
-                {getIcon(link.icon)}
-                <Link href={link.link}>{link.name}</Link>
-              </Flex>
-              {link.subMenu && link.subMenu.length > 0 ? (
-                <ul>
-                  {link.subMenu.map((subLink) => (
-                    <li key={subLink.name}>
-                      <Link href={subLink.link}>{subLink.name}</Link>  
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </li>
-          ))}
-        </ul>
-      </nav>
+      Table of Contents
+      <Box sx={{ 
+        fontSize: 'body',
+        color: 'text'
+      }} dangerouslySetInnerHTML={{ __html: toc }} />
     </Flex>
   )
 }

@@ -5,6 +5,7 @@ title: "Post 1"
 featuredImage: ../images/elephant.jpg
 tags: ["post-1", "life", "math"]
 ---
+
 Hola!
 This is a part of the excerpt
 $a^2 + b^2 = c^2$
@@ -31,10 +32,10 @@ $$
 a^2 + b^2 = c^2
 $$
 
-Donec Thebis
+# Donec Thebis
 ============
 
-Cava ludere exsistere consilium pollice
+## Cava ludere exsistere consilium pollice
 ---------------------------------------
 
 Lorem markdownum contraria premens, pelagi, manum, iuvenes altera ramosque
@@ -48,7 +49,7 @@ _possidet praenuntia adiecit_, quid?
     import * from react;
 ```
 
-Exhibuit meorum exibat se noverit fretum
+### Exhibuit meorum exibat se noverit fretum
 ----------------------------------------
 
 Hunc cum scopulum feras libera et poste huic demens sanguine feras, non alto

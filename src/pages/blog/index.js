@@ -4,6 +4,7 @@ import { Flex } from "theme-ui"
 import PostTile from '../../components/PostTile'
 
 const BlogHomePage = ({ data: { allMarkdownRemark: { edges } } }) => {
+  console.log(edges)
   return (
     <Flex sx={{ flexDirection: 'column', flex: 1 }}>
       Blog Home Page:
@@ -16,17 +17,18 @@ const BlogHomePage = ({ data: { allMarkdownRemark: { edges } } }) => {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { frontmatter: { date: DESC }}) {
+    allMarkdownRemark(filter: {}, sort: {frontmatter: {date: DESC}}) {
       edges {
         node {
           id
           excerpt(pruneLength: 250)
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             slug
-            title
             tags
+            title
+            date(formatString: "MMMM DD, YYYY")
           }
+          tableOfContents
         }
       }
     }

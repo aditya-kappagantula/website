@@ -4,12 +4,11 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import RightMenu from "../../components/RightMenu"
 import { Flex } from "theme-ui"
 
-export default function BlogPostTemplate({ data }) {
-  const { markdownRemark: { frontmatter: { title, date, featuredImage }, html } } = data // data.markdownRemark holds your post data
-  console.log(featuredImage)
+export default function BlogPostTemplate({data}) {
+  const { markdownRemark: { frontmatter: { title, date, featuredImage }, html, tableOfContents } } = data
   let featuredImg = getImage(featuredImage?.childImageSharp?.gatsbyImageData)
   return (
-    <Flex>
+    <Flex sx={{mx: 'l'}}>
       <Flex sx={{ flexDirection: 'column', flex: 1}}>
         <h1>{title}</h1>
         <h2>{date}</h2>
@@ -18,7 +17,7 @@ export default function BlogPostTemplate({ data }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Flex>
-      <RightMenu />
+      <RightMenu toc={tableOfContents} /> 
     </Flex>
   )
 }
@@ -42,6 +41,7 @@ export const pageQuery = graphql`
           }
         }
       }
+      tableOfContents
     }
   }
 `

@@ -16,17 +16,6 @@ audet plangoris tulit: insigne. Arsit Procne quondam saxa movit ossibus, vulnus
 exigis coetusque potest iterumque Iovem tollens. Ignisque mox fulvo referat
 milia est __neque__, Vulcania aures.
 
-    if (nas.typefaceWindows(52, engineBinSampling, website_box_desktop(3 + font,
-            leak, 5))) {
-        modemPoint /= bash;
-        swipe(recycle_eps, alignment_cpa_interface * editor_permalink_disk, 62);
-    }
-    cd.shortcutPortalToken += guid(2, 293031, firewall_hdtv_upnp) -
-            multi_mac_pim + 4;
-    var password = reciprocal_pitch_source(3, user(nntp, 2, 4) + cloneSamplePpc,
-            webmasterCopyright);
-    var domain_kilobit_hard = insertion;
-
 Aliquem Phobetora ardent flectitur Theseus tum patens
 -----------------------------------------------------
 

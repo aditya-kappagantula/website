@@ -2,17 +2,26 @@ html, body, #___gatsby {
   height: 100%;
 }
 
+a {
+  color: unset;
+}
+
+ul {
+  list-style: none !important;
+  margin-block-start: unset !important;
+  margin-block-end: unset !important;
+  padding-inline-start: 10px;
+}
+
+::marker {
+  display: none;
+}
+
 #gatsby-focus-wrapper {
   height: 100%;
   display: flex;
   flex: 1;
   flex-direction: column;
-}
-
-ul {
-  padding-inline-start: unset;
-  margin-block-start: unset;
-  margin-block-end: unset;
 }
 
 .gatsby-highlight-code-line {

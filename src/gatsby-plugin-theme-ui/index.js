@@ -174,7 +174,7 @@ const theme = {
     },
     "img": {
       "maxWidth": "100%"
-    }
+    },
   }
 }
 
