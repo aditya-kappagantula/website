@@ -52,7 +52,7 @@ function RightMenu({ toc }) {
     }}>
       Table of Contents
       <Box sx={{ 
-        fontSize: 'body',
+        fontSize: 'small',
         color: 'text'
       }} dangerouslySetInnerHTML={{ __html: toc }} />
     </Flex>

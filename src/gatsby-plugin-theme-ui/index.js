@@ -34,11 +34,12 @@ const theme = {
     "monospace": "Menlo, monospace"
   },
   "fontSizes": {
-    body: 12,
-    h4: 14,
-    h3: 16,
-    h2: 20,
-    h1: 24,
+    small: ".75em",
+    body: "1em",
+    h4: "14em",
+    h3: "16em",
+    h2: "20em",
+    h1: "24em",
   },
   "fontWeights": {
     "body": 400,
@@ -96,7 +97,7 @@ const theme = {
       "fontFamily": "heading",
       "lineHeight": "heading",
       "fontWeight": "heading",
-      "fontSize": 5
+      "fontSize": "body"
     },
     "h2": {
       "color": "text",

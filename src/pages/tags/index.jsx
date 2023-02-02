@@ -6,7 +6,7 @@ import PillButton from '../../components/PillButton'
 
 const TagsListPage = ({ data }) => {
   return (
-    <Flex sx={{ flexWrap: 'wrap' }}>
+    <Flex sx={{ flexWrap: 'wrap', height: 'fit-content' }}>
       {  
         data.allMarkdownRemark.group.map(({ fieldValue }) => {
           const icon = getIcon(fieldValue)

@@ -10,21 +10,19 @@ function PillButton ({label, url, children}) {
     navigate(url)
   }
   return (
-    <Box>
-      <Flex onClick={navigateToRoute}
-      sx={{ 
-        cursor: 'pointer',
-        alignItems: 'center', 
-        pr: 'xs',
-        pl: 'xs',
-        m: 'xxs',
-        border: colorMode,
-        borderRadius: 'm'
-      }}>
-        {children} {label}
-      </Flex>
-    </Box>
-
+    <Flex onClick={navigateToRoute}
+    sx={{ 
+      cursor: 'pointer',
+      alignItems: 'center', 
+      pr: 'xs',
+      pl: 'xs',
+      m: 'xxs',
+      border: colorMode,
+      borderRadius: 'm',
+      height: 'fit-content'
+    }}>
+      {children} {label}
+    </Flex>
   )
 }
 
