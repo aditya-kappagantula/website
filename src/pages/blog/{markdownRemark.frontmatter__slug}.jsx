@@ -5,13 +5,13 @@ import RightMenu from "../../components/RightMenu"
 import { Flex } from "theme-ui"
 
 export default function BlogPostTemplate({data}) {
-  const { markdownRemark: { frontmatter: { title, date, featuredImage }, html, tableOfContents } } = data
-  let featuredImg = getImage(featuredImage?.childImageSharp?.gatsbyImageData)
+  const { markdownRemark: { frontmatter: { title, date, featuredImage, author }, html, tableOfContents } } = data
+  const featuredImg = getImage(featuredImage?.childImageSharp?.gatsbyImageData)
   return (
     <Flex sx={{mx: 'l'}}>
       <Flex sx={{ flexDirection: 'column', flex: 1}}>
         <h1>{title}</h1>
-        <h2>{date}</h2>
+        <h4>{author}, {date}</h4>
         <div>
           <GatsbyImage image={featuredImg} alt={title} />
         </div>
@@ -30,6 +30,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        author
         featuredImage {
           childImageSharp {
             gatsbyImageData(

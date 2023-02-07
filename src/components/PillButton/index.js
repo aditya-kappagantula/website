@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { Box, jsx } from "theme-ui"
-import { Flex, useColorMode } from "theme-ui"
+import { Flex, useColorMode, jsx } from "theme-ui"
 import { navigate } from "gatsby"
 
 function PillButton ({label, url, children}) {

@@ -30,10 +30,11 @@ export const pageQuery = graphql`
           frontmatter {
             title
             slug
+            author
             tags
             featuredImage {
               childImageSharp {
-                gatsbyImageData(width: 800, height: 400)
+                gatsbyImageData(width: 200, height: 100)
               }
             }
           }

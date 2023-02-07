@@ -47,12 +47,12 @@ const theme = {
     "bold": 700
   },
   "lineHeights": {
-    "body": 1.75,
-    "heading": 1.25
+    "body": "1.75rem",
+    "heading": "1.25rem"
   },
   "radii": {
-    "s": "10px",
-    "m": "20px",
+    "s": ".5rem ",
+    "m": "1rem",
   },
   "borders": {
     light: "1px solid rgb(0,0,0,0.2)",

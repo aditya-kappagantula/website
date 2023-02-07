@@ -26,6 +26,7 @@ export const pageQuery = graphql`
             slug
             tags
             title
+            author
             date(formatString: "MMMM DD, YYYY")
           }
           tableOfContents

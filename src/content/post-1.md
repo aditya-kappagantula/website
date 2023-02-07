@@ -3,6 +3,7 @@ slug: "/bp-1"
 date: "2022-11-24"
 title: "Post 1"
 featuredImage: ../images/elephant.jpg
+author: "foo"
 tags: ["post-1", "life", "math"]
 ---
 
