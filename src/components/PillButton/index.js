@@ -18,7 +18,11 @@ function PillButton ({label, url, children}) {
       m: 'xxs',
       border: colorMode,
       borderRadius: 'm',
-      height: 'fit-content'
+      fontSize: 'small',
+      height: 'fit-content',
+      backgroundColor: 'highlight',
+      fontWeight: 'highlight',
+      color: 'highlightText'
     }}>
       {children} {label}
     </Flex>

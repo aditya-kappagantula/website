@@ -40,8 +40,8 @@ function RightMenu({ toc }) {
   return (
     <Flex sx={{
       display: ['none', 'flex'], 
-      borderLeft: colorMode, 
-      px: 'l',
+      borderLeft: colorMode,
+      pl: 'm',
       position: 'fixed',
       pt: 'xl',
       top: 0,
@@ -50,10 +50,14 @@ function RightMenu({ toc }) {
       maxWidth: [null, '16rem'],
       flexDirection: 'column'
     }}>
-      Table of Contents
+      On This Page
       <Box sx={{ 
         fontSize: 'small',
-        color: 'text'
+        a: {
+          ':hover': {
+            color: 'highlightText'
+          }
+        }
       }} dangerouslySetInnerHTML={{ __html: toc }} />
     </Flex>
   )

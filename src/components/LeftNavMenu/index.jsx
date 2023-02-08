@@ -10,7 +10,7 @@ function LeftNavMenu() {
   return (
     <Flex sx={{
       display: ['none', 'flex'], 
-      borderRight: colorMode, 
+      borderRight: colorMode,
       px: 'l',
       position: 'fixed',
       pt: 'xl',
@@ -21,9 +21,10 @@ function LeftNavMenu() {
         <ul sx={{ listStyle: "none", flex: 1 }}>
           {menuLinks.map((link) => (
             <li key={link.name} sx={{ m: 's', cursor: 'pointer' }}>
-              <Flex sx={{ alignItems: 'center' }}>
+              <Flex sx={{ alignItems: 'center', ':hover': { color: 'highlightText'} }}>
                 {getIcon(link.icon)}
-                <Link href={link.link}>{link.name}</Link>
+                <a href={link.link}>{link.name}</a>
+                {/* <Link sx={{':hover': { color: 'highlightText'}}} href={link.link}>{link.name}</Link> */}
               </Flex>
               {link.subMenu && link.subMenu.length > 0 ? (
                 <ul>

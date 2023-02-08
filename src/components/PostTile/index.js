@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex, useColorMode} from 'theme-ui'
+import { jsx, Box, Flex, useColorMode} from 'theme-ui'
 import getIcon from "../../utils/tagIcons"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import PillButton from '../../components/PillButton'
@@ -7,6 +7,7 @@ import { navigate } from "gatsby"
 
 function PostTile({ data: { node: { excerpt, frontmatter: { slug, tags, title, featuredImage }}} }) {
   const image = getImage(featuredImage?.childImageSharp?.gatsbyImageData)
+  console.log(featuredImage)
   const [colorMode] = useColorMode()
   function navigateToRoute(url) {
     navigate(`/blog${slug}`)
@@ -20,15 +21,18 @@ function PostTile({ data: { node: { excerpt, frontmatter: { slug, tags, title, f
       cursor: 'pointer'
     }} onClick={navigateToRoute}>
       <Flex>
-        { excerpt }
+        <Box>
+          <h4 sx={{ color: 'heading' }}>{title}</h4>
+          { excerpt }
+        </Box>
         <GatsbyImage image={image} alt={title} sx={{ minWidth: '200px' }} />
       </Flex>
       <Flex sx={{ flexWrap: 'wrap' }}>
         {  
-          tags.map(tag => {
+          tags.map((tag, index) => {
             const icon = getIcon(tag)
             return (
-              <PillButton label={tag} url={`/tags/${tag}`}>
+              <PillButton key={index} label={tag} url={`/tags/${tag}`}>
                 {icon}
               </PillButton>
             )

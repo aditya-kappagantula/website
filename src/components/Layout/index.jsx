@@ -28,7 +28,7 @@ function Layout({ children, pageContext }) {
       }}>
         <Header />
       </Flex>
-      <Flex sx={{ flex: 1, color: 'text', mx: [null, 'xl'], mt: 'xl', height: '100%' }}>
+      <Flex sx={{ flex: 1, mx: [null, 'xl'], mt: 'xl', height: '100%' }}>
         <LeftNavMenu />
         <Flex sx={{ flex: 1, mx: [null, 'xxxl'] }}>
           {children}

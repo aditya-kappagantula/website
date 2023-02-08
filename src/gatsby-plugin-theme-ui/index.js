@@ -43,6 +43,7 @@ const theme = {
   },
   "fontWeights": {
     "body": 400,
+    "highlight": 500,
     "heading": 600,
     "bold": 700
   },
@@ -59,26 +60,22 @@ const theme = {
     dark: "1px solid #149414",
   },
   "colors": {
-    "text": "#000000",
+    "text": "#20262E",
     "icon": "#149414",
-    "background": "#FEFEFE",
-    "primary": "#000",
-    "secondary": "#000",
-    "highlight": "#DDD",
-    "muted": "#f6f6ff",
-    "red": "#ec3750",
-    "green": "#33d6a6",
-    "blue": "#338eda",
-    "gray": "#666",
+    "heading": "#6A620B",
+    "title": "#6F2020",
+    "background": "#B5D5C5",
+    "highlight": "#004225",
+    "highlightText": "#FFF",
     "modes": {
       "dark": {
-        "icon": "#FFFFFF",
+        "heading": "#AAA",
+        "title": "#ACACAC",
+        "icon": "#B5D5C5",
         "text": "#149414", 
         "background": "#333",
-        "primary": "#FFF",
-        "secondary": "#FFF",
-        "highlight": "#333",
-        "muted": "#011",
+        "highlight": "#004225",
+        "highlightText": "#FFF"
       }
     }
   },

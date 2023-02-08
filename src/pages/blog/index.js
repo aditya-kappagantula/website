@@ -1,15 +1,14 @@
-import React from "react"
 import { graphql } from "gatsby"
-import { Flex } from "theme-ui"
+/** @jsx jsx */
+import { Flex, jsx } from "theme-ui"
 import PostTile from '../../components/PostTile'
 
 const BlogHomePage = ({ data: { allMarkdownRemark: { edges } } }) => {
-  console.log(edges)
   return (
     <Flex sx={{ flexDirection: 'column', flex: 1 }}>
-      Blog Home Page:
+      <h1 sx={{ color: 'title' }}>Blog</h1>
       <Flex sx={{ flexDirection: 'column', flex: 1 }}>
-        { edges.map(edge => <PostTile data={edge} />) }
+        { edges.map((edge, index) => <PostTile key={index} data={edge} />) }
       </Flex>
     </Flex>
   )
@@ -28,6 +27,11 @@ export const pageQuery = graphql`
             title
             author
             date(formatString: "MMMM DD, YYYY")
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(width: 200, height: 100)
+              }
+            }
           }
           tableOfContents
         }

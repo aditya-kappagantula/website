@@ -14,9 +14,8 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	/* font-size: 100%; */
-	/* font: inherit; */
 	vertical-align: baseline;
+  /* color: unset; */
 }
 
 h1 {
@@ -32,12 +31,9 @@ h3 {
   font-weight: 400;
 }
 h4, h5, h6 {
-  font-weight: 400;
+  font-weight: 600;
 }
 
-h3, h4, h5, h6 {
-  font-weight: normal;
-}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -62,13 +58,13 @@ table {
 	border-spacing: 0;
 }
 
-
 html, body, #___gatsby {
   height: 100%;
 }
 
 a {
   color: unset;
+  text-decoration: unset;
 }
 
 ul {
@@ -102,6 +98,7 @@ ul {
 pre[class*="language-"] {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+  border-radius: 0 !important;
 }
 
 .line-numbers-rows > span:last-child {
@@ -114,19 +111,15 @@ pre[class*="language-"] {
   justify-content: flex-end;
   position: relative;
   top: 40px !important;
-  left: -10px !important;
+  left: 0px !important;
   margin-top: -28px;
   z-index: 1;
   pointer-events: none;
 }
 
 .gatsby-remark-prismjs-copy-button {
-  cursor: pointer;
-  pointer-events: initial;
-  font-size: 13px;
-  padding: 3px 5px 2px;
-  border-radius: 3px;
-  color: rgba(255, 255, 255, 0.88);
+  font-size: 12px !important;
+  padding: 0 5px !important;
 }
 
 .gatsby-highlight {

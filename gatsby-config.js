@@ -9,11 +9,11 @@ module.exports = {
         link: `/`,
         icon: `home`
       },
-      {
-        name: `About`,
-        link: `/about`,
-        icon: `about`,
-      },
+      // {
+      //   name: `About`,
+      //   link: `/about`,
+      //   icon: `about`,
+      // },
       {
         name: `Blog`,
         link: `/blog`,
