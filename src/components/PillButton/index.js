@@ -22,7 +22,7 @@ function PillButton ({label, url, children}) {
       height: 'fit-content',
       backgroundColor: 'highlight',
       fontWeight: 'highlight',
-      color: 'highlightText'
+      color: 'buttonText'
     }}>
       {children} {label}
     </Flex>

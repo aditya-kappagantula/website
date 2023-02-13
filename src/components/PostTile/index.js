@@ -7,7 +7,6 @@ import { navigate } from "gatsby"
 
 function PostTile({ data: { node: { excerpt, frontmatter: { slug, tags, title, featuredImage }}} }) {
   const image = getImage(featuredImage?.childImageSharp?.gatsbyImageData)
-  console.log(featuredImage)
   const [colorMode] = useColorMode()
   function navigateToRoute(url) {
     navigate(`/blog${slug}`)

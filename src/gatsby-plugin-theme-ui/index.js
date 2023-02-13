@@ -66,7 +66,8 @@ const theme = {
     "title": "#6F2020",
     "background": "#B5D5C5",
     "highlight": "#004225",
-    "highlightText": "#FFF",
+    "highlightText": "#6F2020",
+    "buttonText": "#FFF",
     "modes": {
       "dark": {
         "heading": "#AAA",
@@ -75,7 +76,8 @@ const theme = {
         "text": "#149414", 
         "background": "#333",
         "highlight": "#004225",
-        "highlightText": "#FFF"
+        "highlightText": "#FFF",
+        "buttonText": "#FFF"
       }
     }
   },
