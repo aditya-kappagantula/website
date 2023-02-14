@@ -20,7 +20,7 @@ function PillButton ({label, url, children}) {
       borderRadius: 'm',
       fontSize: 'small',
       height: 'fit-content',
-      backgroundColor: 'highlight',
+      backgroundColor: 'britishGreen',
       fontWeight: 'highlight',
       color: 'buttonText'
     }}>

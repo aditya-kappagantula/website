@@ -60,24 +60,26 @@ const theme = {
     dark: "1px solid #149414",
   },
   "colors": {
-    "text": "#20262E",
+    "text": "#07284E",
     "icon": "#149414",
     "heading": "#6A620B",
     "title": "#6F2020",
-    "background": "#B5D5C5",
-    "highlight": "#004225",
+    "background": "#C2D1B4",
+    "highlight": "#8F9A84",
     "highlightText": "#6F2020",
     "buttonText": "#FFF",
+    "britishGreen": "#004225",
     "modes": {
       "dark": {
         "heading": "#AAA",
         "title": "#ACACAC",
-        "icon": "#B5D5C5",
+        "icon": "#C2D1B4",
         "text": "#149414", 
         "background": "#333",
         "highlight": "#004225",
         "highlightText": "#FFF",
-        "buttonText": "#FFF"
+        "buttonText": "#FFF",
+        "britishGreen": "#004225"
       }
     }
   },
