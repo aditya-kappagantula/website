@@ -65,8 +65,9 @@ const theme = {
     "heading": "#6A620B",
     "title": "#6F2020",
     "background": "#C2D1B4",
-    "highlight": "#8F9A84",
+    "highlight": "#422800",
     "highlightText": "#6F2020",
+    "importantText": "#F7DF3E",
     "buttonText": "#FFF",
     "britishGreen": "#004225",
     "modes": {
