@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `website`,
     siteUrl: `https://www.yourdomain.tld`,
-    description: `This is a personal website.`,
+    description: `This is a personal website aimed at providing interesting content to readers.`,
     menuLinks: [
       {
         name: `Home`,
@@ -65,9 +65,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `The Cool Application`,
-        short_name: `Cool App`,
-        description: `The application does cool things and makes your life better.`,
+        name: `Demystified Joe`,
+        short_name: `Demystified Joe`,
+        description: `Aditya Kappagantula mainly posts on topics that he got enlightened on.`,
         lang: `en`,
         display: `standalone`,
         icon: `src/images/icon.png`,
