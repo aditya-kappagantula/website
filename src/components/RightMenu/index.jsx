@@ -47,9 +47,9 @@ function RightMenu({ toc }) {
       top: 0,
       right: 'xl',
       bottom: 0,
-      maxWidth: [null, '16rem'],
-      flexDirection: 'column'
-    }}>
+      width: [null, '16rem'],
+      flexDirection: 'column',
+    }} className="right-menu">
       On This Page
       <Box sx={{ 
         fontSize: 'small',
